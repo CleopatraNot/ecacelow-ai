@@ -60,10 +60,12 @@ export default function EcacelowChat() {
               <div className="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold mr-2">E</div>
             )}
             <div
-              className={\`max-w-[75%] px-4 py-3 rounded-2xl text-sm whitespace-pre-line \${msg.role === "ai" ? "bg-indigo-600 text-left" : "bg-gray-700 text-right"}\`}
-            >
-              {msg.content}
-            </div>
+  className={`max-w-[75%] px-4 py-3 rounded-2xl text-sm whitespace-pre-line ${
+    msg.role === "ai" ? "bg-indigo-600 text-left" : "bg-gray-700 text-right"
+  }`}
+>
+  {msg.content}
+</div>
           </div>
         ))}
         <div ref={messagesEndRef} />
